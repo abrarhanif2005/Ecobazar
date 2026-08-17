@@ -1,0 +1,266 @@
+:root {
+    --gren-gray-scale-900: #002603;
+    --gren-gray-scale-800: #173b1a;
+    --gren-gray-scale-700: #2b572e;
+    --gren-gray-scale-600: #406b42;
+    --gren-gray-scale-500: #618062;
+    --gren-gray-scale-400: #7a997c;
+    --gren-gray-scale-300: #96b297;
+    --gren-gray-scale-200: #b4ccb4;
+    --gren-gray-scale-100: #dae5da;
+    --gren-gray-scale-50: #edf2ee;
+    --gray-scale-gray--800: #333;
+    --gray-scale-gray--700: #4d4d4d;
+    --gray-scale-gray--900: #1a1a1a;
+    --gray-scale-gray--600: #666;
+    --gray-scale-gray--500: #808080;
+    --gray-scale-gray--400: #999;
+    --gray-scale-gray--300: #b3b3b3;
+    --gray-scale-gray--200: #ccc;
+    --gray-scale-gray--100: #e5e5e5;
+    --gray-scale-gray--50: #f2f2f2;
+    --gray-scale-white: #fff;
+    --branding-success-bright: #84d187;
+    --branding-success: #00b207;
+    --branding-success-dark: #2c742f;
+    --branding-warning: #ff8a00;
+    --branding-error: #ea4b48;
+
+    --font-family: "Poppins", sans-serif;
+    --second-family: "Segoe Script", sans-serif;
+    --third-family: "Dancing Script", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    display: inline-block;
+}
+
+header p {
+    margin: 0;
+    padding: 13px 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    color: var(--gren-gray-scale-700);
+}
+
+#banner {
+    background: var(--gren-gray-scale-50);
+}
+
+#banner select {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--gren-gray-scale-700);
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+header nav {
+    box-shadow: 0 1px 0 0 var(--gray-scale-gray--100);
+    background: var(--gray-scale-white);
+}
+
+header nav,
+header .btn {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-scale-gray--500);
+    transition: all 0.3s ease;
+
+}
+
+header .home {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-scale-gray--900);
+    transition: all 0.3s ease;
+
+}
+
+.btn:hover,
+nav a:hover {
+    color: var(--branding-success-bright);
+}
+
+nav img {
+    padding: 20px 0;
+
+}
+
+nav button {
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+nav .tel {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-scale-gray--900);
+}
+.search{
+    display: none;
+}
+
+.search.active{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    top: 0;
+    left: 0;
+}
+
+.search .container {
+
+    display: flex;
+    justify-content: center;
+}
+
+.search .position {
+    position: absolute;
+    top: 10rem;
+}
+
+.search input {
+
+
+    width: 30rem;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+#hero {
+    background: var(--gren-gray-scale-50);
+}
+
+#hero img {
+    width: 100%;
+    padding: 70px 0 72px 0;
+}
+
+#hero .shop {
+    border-radius: 53px;
+    padding: 16px 40px;
+
+    background: var(--branding-success);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--gray-scale-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero h2 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 120%;
+    color: var(--gray-scale-gray--900);
+}
+
+#hero p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--branding-success);
+}
+
+#hero h4 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    color: var(--gray-scale-gray--900);
+}
+
+#hero span {
+    font-weight: 600;
+    color: var(--branding-warning);
+}
+
+#hero h6 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-scale-gray--500);
+}
