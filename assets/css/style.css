@@ -30,6 +30,9 @@
     --second-family: "Segoe Script", sans-serif;
     --third-family: "Dancing Script", sans-serif;
 }
+body{
+    font-family: var(--font-family);
+}
 
 *,
 *::before,
@@ -168,18 +171,20 @@ nav .tel {
     line-height: 150%;
     color: var(--gray-scale-gray--900);
 }
-.search{
+
+.search {
     display: none;
 }
 
-.search.active{
+.search.active {
     display: block;
     position: absolute;
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
     top: 0;
     left: 0;
+    z-index: 999;
 }
 
 .search .container {
@@ -197,12 +202,18 @@ nav .tel {
 
 
     width: 30rem;
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid black;
     border-radius: 15px;
-    padding: 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+
 }
 
 #hero {
     background: var(--gren-gray-scale-50);
+    position: relative;
 }
 
 #hero img {
@@ -263,4 +274,219 @@ nav .tel {
     font-size: 14px;
     line-height: 150%;
     color: var(--gray-scale-gray--500);
+}
+
+.search .card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#hero .container {
+    position: relative;
+}
+
+#hero .next,
+#hero .previous {
+    position: absolute;
+    top: 50%;
+}
+
+#hero .previous {
+    transform: rotate(180deg);
+    left: -3.5em;
+
+}
+
+#hero .next {
+
+    right: -3.5em;
+
+}
+
+#hero button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+#hero button svg {
+    transition: transform 0.4s ease-in-out;
+    display: block;
+}
+
+#hero button:hover svg {
+    transform: rotateY(360deg);
+
+}
+
+nav .menu svg {
+    width: 30px;
+    height: 30px;
+}
+
+header .offcanvus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+    pointer-events: none;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+header .offcanvus.active {
+    pointer-events: auto;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.offcanvus .slider {
+    display: block;
+    max-width: 800px;
+    width: 80%;
+    background-color: white;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: translateX(-200%);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.offcanvus .slider.active {
+    transform: translateX(0%);
+}
+
+.menu-icon {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 990;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+    padding: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+.menu-icon.menu-hidden {
+    transform: translateY(100%);
+}
+
+.menu-icon button {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+header .profile-canvus {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+    pointer-events: none;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+header .profile-canvus.active {
+    pointer-events: auto;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.profile-canvus .profile-slider {
+    display: block;
+    max-width: 400px;
+    width: 80%;
+    background-color: white;
+    margin-left: auto;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: translateX(200%);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.profile-canvus .profile-slider.active {
+    transform: translateX(0%);
+}
+
+.profile-canvus img {
+    width: 100%;
+    height: 100%;
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 50%
+}
+
+header .cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+    pointer-events: none;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+header .cart.active {
+    pointer-events: auto;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cart .cart-slider {
+    display: block;
+    max-width: 400px;
+    width: 80%;
+    background-color: white;
+    margin-left: auto;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: translateX(200%);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+}
+
+.cart .cart-slider.active {
+    transform: translateX(0%);
+}
+
+.cart-slider .checkout {
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    flex-direction: column;
+
+}
+
+.cart-slider .checkout a {
+    border-radius: 53px;
+    padding: 16px 40px;
+
+    background: var(--branding-success);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--gray-scale-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-slider .checkout .cartamount {
+    font-size: 1.5rem;
+    font-weight: 600;
 }

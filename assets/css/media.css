@@ -1,0 +1,9 @@
+@media (max-width:768px) {
+    .previous{
+        display: none;
+    }
+    #hero .next{
+        right: 1.5rem;
+    }
+    
+}
