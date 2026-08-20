@@ -13,9 +13,9 @@
 
 <body>
     <header>
-        <section id="banner">
+        <section id="banner" class="d-none d-lg-flex">
             <div class="container">
-                <div class="row">
+                <div class="d-lg-flex d-none">
                     <div class="col-8 d-flex gap-3 align-items-center">
                         <span><svg width="16" height="19" viewBox="0 0 16 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -43,8 +43,8 @@
         </section>
         <nav>
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 d-flex align-items-center justify-content-start gap-2">
+                <div class="d-flex align-items-center">
+                    <div class="col-lg-5  align-items-center justify-content-start gap-2 d-none d-lg-flex">
                         <div class="dropdown">
                             <button class="btn home  dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -91,8 +91,8 @@
                         </div>
                         <a href="./index.html">About US</a>
                     </div>
-                    <div class="col-lg-2"><img src="./pic/Logo.png" alt=""></div>
-                    <div class="col-lg-5 d-flex gap-3 justify-content-end">
+                    <div class="col-lg-2 col-10"><img src="./pic/Logo.png" alt=""></div>
+                    <div class="col-lg-5 d-none d-lg-flex gap-3 justify-content-end">
                         <div class="d-flex align-items-center gap-2 justify-content-end">
                             <span><svg width="34px" height="34px" viewBox="0 0 34 34" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -112,8 +112,8 @@
                             <a href="tel:(219) 555-0114" class="tel">(219) 555-0114</a>
                         </div>
                         <div class="d-flex gap-3  justify-content-end">
-                            <button type="button" class="search-button"><span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                            <button type="button" class="search-button"><span><svg width="32" height="32"
+                                        viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M14.6667 25.3333C20.5577 25.3333 25.3333 20.5577 25.3333 14.6667C25.3333 8.77563 20.5577 4 14.6667 4C8.77563 4 4 8.77563 4 14.6667C4 20.5577 8.77563 25.3333 14.6667 25.3333Z"
                                             stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"
@@ -129,7 +129,7 @@
                                             stroke="#1A1A1A" stroke-width="1.5" />
                                     </svg>
                                 </span></button>
-                            <button type="button"><span>
+                            <button type="button" class="cartTrigger"><span>
                                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -137,8 +137,8 @@
                                             stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg></span></button>
-                            <button type="button"><span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                            <button type="button" class="profile"><span><svg width="32" height="32" viewBox="0 0 32 32"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M16.0003 14.6667C18.9458 14.6667 21.3337 12.2789 21.3337 9.33333C21.3337 6.38781 18.9458 4 16.0003 4C13.0548 4 10.667 6.38781 10.667 9.33333C10.667 12.2789 13.0548 14.6667 16.0003 14.6667Z"
                                             stroke="#1A1A1A" stroke-width="1.5" />
@@ -148,76 +148,627 @@
                                     </svg></span></button>
                         </div>
                     </div>
+                    <button type="button" class="d-flex justify-content-end align-items-center menu d-lg-none col-2">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <g fill="none" stroke="currentColor" stroke-dasharray="16" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2">
+                                    <path d="M5 5h14">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s"
+                                            values="16;0" />
+                                    </path>
+                                    <path stroke-dashoffset="16" d="M5 12h14">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.3s" dur="0.3s"
+                                            to="0" />
+                                    </path>
+                                    <path stroke-dashoffset="16" d="M5 19h14">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.3s"
+                                            to="0" />
+                                    </path>
+                                </g>
+                            </svg>
+                        </span>
+                    </button>
                 </div>
             </div>
         </nav>
 
-        <div class="search">
+        <div class="search ">
             <div class="container ">
-                <div class="position">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <input type="text" placeholder="Search here">
+                <div class="position px-4">
+                    <div class="d-flex justify-content-center align-items-center ">
+                        <input type="text" placeholder="Search here" class="search-input">
                     </div>
-                    <div class="py-4 d-flex gap-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="./pic/1.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card’s content.</p>
+                    <div class="p-5 row g-3">
+                        <div class="col-lg-3 col-12 col-md-6">
+                            <div class="card ">
+                                <img src="./pic/1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk
+                                        of the card’s content.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="./pic/1.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card’s content.</p>
+                        <div class="col-lg-3 col-12 col-md-6">
+                            <div class="card ">
+                                <img src="./pic/1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk
+                                        of the card’s content.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="./pic/1.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card’s content.</p>
+                        <div class="col-lg-3 col-12 col-md-6">
+                            <div class="card ">
+                                <img src="./pic/1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk
+                                        of the card’s content.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="./pic/1.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card’s content.</p>
+                        <div class="col-lg-3 col-12 col-md-6">
+                            <div class="card ">
+                                <img src="./pic/1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk
+                                        of the card’s content.</p>
+                                </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>
 
         </div>
+        <div class="profile-canvus">
+            <div class="profile-slider">
+                <div class="d-flex flex-column align-items-start justify-content-center ps-5 gap-2 py-5 ">
+                    <img src="./pic/2.jpg" class="mb-3" alt="">
+                    <h3>Abrar Hanif</h3>
+                    <a href="#" class="d-block container-fluid">About You</a>
+                    <a href="#" class="d-block container-fluid">Ordered Items</a>
+                    <a href="#" class="d-block container-fluid">Track Order</a>
+                    <a href="#" class="d-block container-fluid">Update Details</a>
+                    <a href="#" class="d-block container-fluid">Settings</a>
+
+                </div>
+
+            </div>
         </div>
-        
+        <div class="offcanvus">
+            <div class="slider">
+                <div class="d-flex flex-column align-items-center justify-content-start gap-2 ">
+                    <img src="./pic/Logo.png" alt="" class="py-5">
+                    <div class="dropdown">
+                        <button class="btn home  dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Home
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Shop
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Pages
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Blogs
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <a href="./index.html">About US</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="menu-icon container-fluid d-lg-none d-block w-100 px-4">
+            <div class="d-flex justify-content-between align-items-center d-lg-none">
+
+                <button type="button" class="small-search-button"><span><svg width="32" height="32" viewBox="0 0 32 32"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.6667 25.3333C20.5577 25.3333 25.3333 20.5577 25.3333 14.6667C25.3333 8.77563 20.5577 4 14.6667 4C8.77563 4 4 8.77563 4 14.6667C4 20.5577 8.77563 25.3333 14.6667 25.3333Z"
+                                stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M28.0002 28L22.2002 22.2" stroke="#1A1A1A" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></span></button>
+                <button type="button"><span>
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.999 28.0722C-10.6672 13.3333 7.9995 -2.66666 15.999 7.45075C23.9995 -2.66666 42.6661 13.3333 15.999 28.0722Z"
+                                stroke="#1A1A1A" stroke-width="1.5" />
+                        </svg>
+                    </span></button>
+                <button type="button" class="cart-profile"><span>
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.3333 14.1667H7.08333L4.25 29.75H29.75L26.9167 14.1667H22.6667M11.3333 14.1667V9.91667C11.3333 6.78705 13.8704 4.25 17 4.25C20.1296 4.25 22.6667 6.78705 22.6667 9.91667V14.1667M11.3333 14.1667H22.6667M11.3333 14.1667V18.4167M22.6667 14.1667V18.4167"
+                                stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></span></button>
+                <button type="button" class="small-profile"><span><svg width="32" height="32" viewBox="0 0 32 32"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.0003 14.6667C18.9458 14.6667 21.3337 12.2789 21.3337 9.33333C21.3337 6.38781 18.9458 4 16.0003 4C13.0548 4 10.667 6.38781 10.667 9.33333C10.667 12.2789 13.0548 14.6667 16.0003 14.6667Z"
+                                stroke="#1A1A1A" stroke-width="1.5" />
+                            <path
+                                d="M20.0003 18.6666H12.0003C8.31764 18.6666 5.02031 22.0666 7.44297 24.8386C9.09097 26.724 11.8163 28 16.0003 28C20.1843 28 22.9083 26.724 24.5563 24.8386C26.9803 22.0653 23.6816 18.6666 20.0003 18.6666Z"
+                                stroke="#1A1A1A" stroke-width="1.5" />
+                        </svg></span></button>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="cart-slider">
+                <div class="d-flex align-items-center justify-content-center py-5">
+                    <h1>Cart List</h1>
+                </div>
+                <div class="row text-center">
+                    <div class="col-4"><img src="./pic/apple.png" alt=""></div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <h4 class="mb-1">Green Apple</h4>
+                            <h6 class="text-muted mb-0">$ 14.99</h6>
+                        </div>
+                    </div>
+                    <div class="col-2"><button class="btn btn-link text-danger p-0" aria-label="Remove item"
+                            onclick="remove(this)"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor"
+                                    d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
+                            </svg>
+                        </button></div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-4"><img src="./pic/apple.png" alt=""></div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <h4 class="mb-1">Green Apple</h4>
+                            <h6 class="text-muted mb-0">$ 14.99</h6>
+                        </div>
+                    </div>
+                    <div class="col-2"><button class="btn btn-link text-danger p-0" aria-label="Remove item"
+                            onclick="remove(this)"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor"
+                                    d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
+                            </svg>
+                        </button></div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-4"><img src="./pic/apple.png" alt=""></div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <h4 class="mb-1">Green Apple</h4>
+                            <h6 class="text-muted mb-0">$ 14.99</h6>
+                        </div>
+                    </div>
+                    <div class="col-2"><button class="btn btn-link text-danger p-0" aria-label="Remove item"
+                            onclick="remove(this)"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor"
+                                    d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
+                            </svg>
+                        </button></div>
+                </div>
+
+                <div class="checkout">
+                    <div class="cartamount py-4"></div>
+                    <a href="#">Checkout</a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
     </header>
     <main>
         <section id="hero">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <img src="./pic/1.png" alt="Fresh Organic Food" class="img-fluid">
+                <div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <img src="./pic/1.png" alt="Fresh Organic Food" class="img-fluid">
+                        </div>
+                        <div class="col-lg-6 d-flex flex-column align-items-start">
+                            <p class="text-uppercase mb-2">Welcome to shopery</p>
+                            <h2>Fresh & Healthy<br>Organic Food</h2>
+                            <h4 class="my-2">Sale up to <span>30% OFF</span></h4>
+                            <h6>Free shipping on all your order. We deliver, you enjoy</h6>
+                            <a href="#" class="shop gap-3 my-3">Shop Now <span><svg width="17" height="14"
+                                        viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.75 6.77502H0.75" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9.7002 0.75L15.7502 6.774L9.7002 12.799" stroke="white"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span></a>
+                        </div>
                     </div>
-                    <div class="col-lg-6 d-flex flex-column align-items-start">
-                        <p class="text-uppercase mb-2">Welcome to shopery</p>
-                        <h2>Fresh & Healthy<br>Organic Food</h2>
-                        <h4 class="my-2">Sale up to <span>30% OFF</span></h4>
-                        <h6>Free shipping on all your order. We deliver, you enjoy</h6>
-                        <a href="#" class="shop gap-3 my-3">Shop Now <span><svg width="17" height="14"
-                                    viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.75 6.77502H0.75" stroke="white" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M9.7002 0.75L15.7502 6.774L9.7002 12.799" stroke="white" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg></span></a>
+                </div>
+                <button type="button" class="next"><span><svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22.5" cy="22.5" r="22" fill="white" stroke="#E6E6E6" />
+                            <path d="M30.75 22.226H15.75" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M24.7002 16.201L30.7502 22.225L24.7002 28.25" stroke="#1A1A1A" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></span></button>
+                <button type="button" class="previous">
+                    <span><svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22.5" cy="22.5" r="22" fill="white" stroke="#E6E6E6" />
+                            <path d="M30.75 22.226H15.75" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M24.7002 16.201L30.7502 22.225L24.7002 28.25" stroke="#1A1A1A" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+        <section class="services pb-5">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-lg-3 service-cart">
+                        <div class="d-flex justify-content-center align-items-center img"><img src="./pic/2.png" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center flex-column features">
+                            <h3>Free Shipping</h3>
+                            <p>Free shipping with discount</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 service-cart">
+                        <div class="d-flex justify-content-center align-items-center img"><img src="./pic/2.png" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center flex-column features">
+                            <h3>Free Shipping</h3>
+                            <p>Free shipping with discount</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 service-cart">
+                        <div class="d-flex justify-content-center align-items-center img"><img src="./pic/2.png" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center flex-column features">
+                            <h3>Free Shipping</h3>
+                            <p>Free shipping with discount</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 service-cart">
+                        <div class="d-flex justify-content-center align-items-center img"><img src="./pic/2.png" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center flex-column features">
+                            <h3>Free Shipping</h3>
+                            <p>Free shipping with discount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products py-5">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center pb-5">
+                    <h1>Featured Products</h1>
+                    <a href="#" class="d-flex justify-content-center align-items-center gap-3">View all <span><svg
+                                width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.75 6.77502H0.75" stroke="#00B307" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M9.7002 0.75L15.7502 6.774L9.7002 12.799" stroke="#00B307" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span></a>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-3">
+                        <div class="product-cart pb-4 ">
+                            <div><img src="./pic/apple.png" alt=""></div>
+                            <div class="d-flex justify-content-between align-items-center w-100 px-5 px-lg-3">
+                                <div class="d-flex flex-column">
+                                    <h3>Green Apple</h3>
+                                    <h4>$14.99 <span>$20.99</span></h4>
+                                    <div class="d-flex">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#CCCCCC" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center add-cart align-items-center add-content ">
+                                    <button type="button"
+                                        class="w-100 h-100 d-flex justify-content-center align-items-center  add"><svg
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.66667 8.33333H4.16667L2.5 17.5H17.5L15.8333 8.33333H13.3333M6.66667 8.33333V5.83333C6.66667 3.99239 8.15905 2.5 10 2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333V8.33333M6.66667 8.33333H13.3333M6.66667 8.33333V10.8333M13.3333 8.33333V10.8333"
+                                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-cart pb-4 ">
+                            <div><img src="./pic/apple.png" alt=""></div>
+                            <div class="d-flex justify-content-between align-items-center w-100 px-5 px-lg-3">
+                                <div class="d-flex flex-column">
+                                    <h3>Green Apple</h3>
+                                    <h4>$14.99 <span>$20.99</span></h4>
+                                    <div class="d-flex">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#CCCCCC" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center add-cart align-items-center add-content ">
+                                    <button type="button"
+                                        class="w-100 h-100 d-flex justify-content-center align-items-center  add"><svg
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.66667 8.33333H4.16667L2.5 17.5H17.5L15.8333 8.33333H13.3333M6.66667 8.33333V5.83333C6.66667 3.99239 8.15905 2.5 10 2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333V8.33333M6.66667 8.33333H13.3333M6.66667 8.33333V10.8333M13.3333 8.33333V10.8333"
+                                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-cart pb-4 ">
+                            <div><img src="./pic/apple.png" alt=""></div>
+                            <div class="d-flex justify-content-between align-items-center w-100 px-5 px-lg-3">
+                                <div class="d-flex flex-column">
+                                    <h3>Green Apple</h3>
+                                    <h4>$14.99 <span>$20.99</span></h4>
+                                    <div class="d-flex">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#CCCCCC" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center add-cart align-items-center add-content ">
+                                    <button type="button"
+                                        class="w-100 h-100 d-flex justify-content-center align-items-center  add"><svg
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.66667 8.33333H4.16667L2.5 17.5H17.5L15.8333 8.33333H13.3333M6.66667 8.33333V5.83333C6.66667 3.99239 8.15905 2.5 10 2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333V8.33333M6.66667 8.33333H13.3333M6.66667 8.33333V10.8333M13.3333 8.33333V10.8333"
+                                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-cart pb-4 ">
+                            <div><img src="./pic/apple.png" alt=""></div>
+                            <div class="d-flex justify-content-between align-items-center w-100 px-5 px-lg-3">
+                                <div class="d-flex flex-column">
+                                    <h3>Green Apple</h3>
+                                    <h4>$14.99 <span>$20.99</span></h4>
+                                    <div class="d-flex">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#CCCCCC" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center add-cart align-items-center add-content ">
+                                    <button type="button"
+                                        class="w-100 h-100 d-flex justify-content-center align-items-center  add"><svg
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.66667 8.33333H4.16667L2.5 17.5H17.5L15.8333 8.33333H13.3333M6.66667 8.33333V5.83333C6.66667 3.99239 8.15905 2.5 10 2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333V8.33333M6.66667 8.33333H13.3333M6.66667 8.33333V10.8333M13.3333 8.33333V10.8333"
+                                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-cart pb-4 ">
+                            <div><img src="./pic/apple.png" alt=""></div>
+                            <div class="d-flex justify-content-between align-items-center w-100 px-5 px-lg-3">
+                                <div class="d-flex flex-column">
+                                    <h3>Green Apple</h3>
+                                    <h4>$14.99 <span>$20.99</span></h4>
+                                    <div class="d-flex">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#FF8A00" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.20672 8.94078L8.5711 10.4385C8.87335 10.6298 9.24835 10.3452 9.15872 9.99228L8.47585 7.30541C8.45656 7.23057 8.45878 7.1518 8.48227 7.07816C8.50575 7.00453 8.54954 6.93902 8.6086 6.88916L10.7288 5.12478C11.0071 4.89303 10.8638 4.43066 10.5057 4.40741L7.7371 4.22741C7.66255 4.22212 7.59105 4.19577 7.5309 4.15142C7.47075 4.10707 7.42444 4.04656 7.39735 3.97691L6.3646 1.37666C6.33648 1.30276 6.28656 1.23916 6.22146 1.19428C6.15636 1.1494 6.07916 1.12537 6.0001 1.12537C5.92103 1.12537 5.84383 1.1494 5.77873 1.19428C5.71364 1.23916 5.66372 1.30276 5.6356 1.37666L4.60285 3.97691C4.57581 4.04663 4.52952 4.10722 4.46937 4.15164C4.40922 4.19606 4.33768 4.22246 4.2631 4.22778L1.49447 4.40778C1.13672 4.43066 0.992723 4.89303 1.27135 5.12478L3.3916 6.88953C3.45059 6.93936 3.49434 7.00481 3.51782 7.07837C3.5413 7.15193 3.54356 7.23062 3.52435 7.30541L2.89135 9.79728C2.78372 10.2207 3.2341 10.5623 3.59635 10.3324L5.79385 8.94078C5.85561 8.90152 5.92728 8.88066 6.00047 8.88066C6.07366 8.88066 6.14533 8.90152 6.2071 8.94078H6.20672Z"
+                                                fill="#CCCCCC" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center add-cart align-items-center add-content ">
+                                    <button type="button"
+                                        class="w-100 h-100 d-flex justify-content-center align-items-center  add"><svg
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.66667 8.33333H4.16667L2.5 17.5H17.5L15.8333 8.33333H13.3333M6.66667 8.33333V5.83333C6.66667 3.99239 8.15905 2.5 10 2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333V8.33333M6.66667 8.33333H13.3333M6.66667 8.33333V10.8333M13.3333 8.33333V10.8333"
+                                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
