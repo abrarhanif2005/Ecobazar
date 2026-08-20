@@ -30,8 +30,16 @@
     --second-family: "Segoe Script", sans-serif;
     --third-family: "Dancing Script", sans-serif;
 }
-body{
+
+body {
     font-family: var(--font-family);
+
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background: transparent;
 }
 
 *,
@@ -153,6 +161,32 @@ nav a:hover {
     color: var(--branding-success-bright);
 }
 
+nav .btn,
+nav a {
+    position: relative;
+}
+
+nav .btn::before,
+nav a::before {
+    position: absolute;
+    content: "";
+    bottom: -23px;
+    width: 0;
+    height: 3px;
+    background-color: var(--branding-success);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+nav .btn:hover::before,
+nav a:hover::before {
+    visibility: visible;
+    width: 100%;
+    opacity: 1;
+
+}
+
 nav img {
     padding: 20px 0;
 
@@ -172,19 +206,26 @@ nav .tel {
     color: var(--gray-scale-gray--900);
 }
 
+
 .search {
     display: none;
+    position: fixed;
+   
+    inset: 0; 
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    overflow-y: auto; 
 }
 
 .search.active {
     display: block;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
     backdrop-filter: blur(5px);
-    top: 0;
-    left: 0;
-    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 .search .container {
@@ -366,6 +407,7 @@ header .offcanvus.active {
     padding: 10px 0;
     transition: transform 0.3s ease-in-out;
 }
+
 .menu-icon.menu-hidden {
     transform: translateY(100%);
 }
@@ -489,4 +531,156 @@ header .cart.active {
 .cart-slider .checkout .cartamount {
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+.services .container {
+    box-shadow: inset 0 -1px 0 0 var(--gray-scale-gray--200);
+    background: var(--gray-scale-white);
+}
+
+.services .img {
+    padding: 40px 0 16px;
+}
+
+.services .features {
+    padding-bottom: 40px;
+}
+
+.services h3 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--gray-scale-gray--900);
+}
+
+.services p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--gray-scale-gray--400);
+}
+
+.services .service-cart {
+    position: relative;
+}
+
+.services .service-cart::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--branding-success);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.services .service-cart:hover::before {
+    visibility: visible;
+    width: 100%;
+    opacity: 1;
+}
+
+.products .product-cart {
+    border: 1px solid var(--gray-scale-gray--100);
+    border-radius: 8px;
+    background: var(--gray-scale-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+.products .product-cart img {
+    width: 100%;
+
+}
+
+.product-cart .add-cart {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--gray-scale-gray--50);
+}
+
+.product-cart h3 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 150%;
+    color: var(--gray-scale-gray--700);
+}
+
+.product-cart h4 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--gray-scale-gray--900);
+}
+
+.product-cart span {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    text-decoration: line-through;
+    color: var(--gray-scale-gray--400);
+}
+
+.product-cart .add-content {
+    position: relative;
+}
+
+.product-cart .add-content::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    border-radius: 50%;
+    background: var(--branding-success);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+
+}
+
+.product-cart .add-content:hover {
+    z-index: 5;
+    color: var(--gray-scale-white);
+}
+
+.product-cart .add-content:hover button {
+    color: var(--gray-scale-white);
+}
+
+.product-cart .add-content:hover::before {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.products h1 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    color: var(--gray-scale-gray--900);
+}
+
+.products a {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--branding-success);
 }

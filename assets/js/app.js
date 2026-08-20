@@ -14,12 +14,15 @@ const cartSlider = document.querySelector(`.cart-slider`)
 const cartBlur = document.querySelector(`.cart`)
 const SmallcartTrigger = document.querySelector(`.cart-profile`)
 
-searchTrigger.addEventListener(`click`, () => {
-  search.classList.add(`active`)
-})
-SmallsearchTrigger.addEventListener(`click`, () => {
-  search.classList.add(`active`)
-})
+searchTrigger.addEventListener('click', () => {
+  search.classList.add('active');
+  document.body.classList.add('no-scroll'); 
+});
+
+SmallsearchTrigger.addEventListener('click', () => {
+  search.classList.add('active');
+  document.body.classList.add('no-scroll'); 
+});
 menuTrigger.addEventListener(`click`, () => {
   menuBlur.classList.add(`active`)
   menuSlider.classList.add(`active`)
@@ -49,6 +52,7 @@ window.addEventListener('click', (e) => {
     profileSlider.classList.remove(`active`)
     cartSlider.classList.remove(`active`)
     cartBlur.classList.remove(`active`)
+    document.body.classList.remove('no-scroll');
 
   }
 });
