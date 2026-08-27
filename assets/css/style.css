@@ -210,12 +210,12 @@ nav .tel {
 .search {
     display: none;
     position: fixed;
-   
-    inset: 0; 
+
+    inset: 0;
     width: 100%;
     height: 100%;
     z-index: 999;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 .search.active {
@@ -253,8 +253,11 @@ body.no-scroll {
 }
 
 #hero {
-    background: var(--gren-gray-scale-50);
     position: relative;
+    background-image: url(../../pic/hero.jpg);
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
 }
 
 #hero img {
@@ -586,15 +589,24 @@ header .cart.active {
     opacity: 1;
 }
 
+.products .product-cart:hover {
+    box-shadow: 0 0 12px 0 rgba(32, 181, 38, 0.32);
+    background: var(--gray-scale-white);
+    border: 1px solid var(--branding-success-dark);
+  
+  
+}
+
 .products .product-cart {
     border: 1px solid var(--gray-scale-gray--100);
-    border-radius: 8px;
+    border-radius: 10px;
     background: var(--gray-scale-white);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .products .product-cart img {
@@ -683,4 +695,47 @@ header .cart.active {
     font-size: 16px;
     line-height: 150%;
     color: var(--branding-success);
+}
+
+#hero .slick-dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .slick-dots button {
+    color: transparent;
+    background-color: var(--gray-scale-gray--200);
+    border-radius: 50%;
+    border: 1px solid var(--gray-scale-gray--200);
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+}
+
+#hero .slick-dots li.slick-active button {
+    background-color: var(--branding-success);
+    border: 1px solid var(--branding-success);
+
+}
+
+#hero .prev_arrow,
+#hero .next_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+#hero .prev_arrow {
+    left: -50px;
+}
+
+#hero .next_arrow {
+    right: -50px;
 }
